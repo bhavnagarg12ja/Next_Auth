@@ -16,6 +16,7 @@ interface CardWrapperProps {
 }
 import { Header } from '@/components/auth/header';
 import { Social } from '@/components/auth/social';
+import { BackButton } from '@/components/auth/backButton';
 
 export const CardWrapper = ({
   children,
@@ -35,6 +36,9 @@ export const CardWrapper = ({
           <Social />
         </CardFooter>
       )}
+      <CardFooter>
+        <BackButton label={backButtonLabel} href={backButtonhref} />
+      </CardFooter>
     </Card>
   );
 };
